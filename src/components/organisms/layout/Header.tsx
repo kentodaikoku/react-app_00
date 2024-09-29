@@ -27,14 +27,14 @@ export const Header: FC = memo(() => {
       >
         {/* Header titile */}
         <Flex as={'a'} align={"center"} mr={8} _hover={{ cursor: 'pointer' }} onClick={() => handleToLink('')}>
-          <Heading as={'h1'} fontSize={{ base: 'md', md: 'lg' }}>ユーザー管理アプリ</Heading>   
+          <Heading as={'h1'} fontSize={{ base: 'md', md: 'lg' }}>User Management APP</Heading>   
         </Flex>
         {/* Link */}
         <Flex align={"center"} fontSize={"sm"} flexGrow={1} display={{ base: 'none', md: 'flex' }}>
           <Box pr={4}>
-            <Link onClick={() => handleToLink('/user_management')}>ユーザー一覧</Link>
+            <Link onClick={() => handleToLink('/user_management')}>Users List</Link>
           </Box>
-          <Link onClick={() => handleToLink('/setting')}>設定</Link>
+          <Link onClick={() => handleToLink('/setting')}>Setting</Link>
         </Flex>
         {/* Mobile Link */}
         <MenuIconButton onOpen={onOpen} />
