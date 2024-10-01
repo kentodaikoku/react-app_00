@@ -1,15 +1,15 @@
 import { Button } from "@chakra-ui/react";
-import { FC, memo } from "react";
+import { FC, memo, ReactNode } from "react";
 
 type Props = {
-  children: React.ReactNode;
+  children: ReactNode;
   disabled?: boolean;
   loading?: boolean;
   onClick: () => void;
 }
 
 export const PrimaryButton: FC<Props> = memo((props) => {
-  const {children, disabled = false, loading = false, onClick} = props;
+  const { children, disabled = false, loading = false, onClick } = props;
 
   return (
     <Button 
@@ -20,7 +20,7 @@ export const PrimaryButton: FC<Props> = memo((props) => {
       isDisabled={disabled}
       onClick={onClick}
     >
-      {children}
+      { children }
     </Button>
   )
 })
