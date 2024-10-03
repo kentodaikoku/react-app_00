@@ -3,8 +3,8 @@ import { FC, memo, ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-  disabled?: boolean;
-  loading?: boolean;
+  disabled?: boolean; //optional
+  loading?: boolean; //optional
   onClick: () => void;
 }
 
@@ -16,8 +16,8 @@ export const PrimaryButton: FC<Props> = memo((props) => {
       bg='teal.400' 
       color='white' 
       _hover={{ opacity: 0.8 }} 
-      isLoading={loading}
       isDisabled={disabled}
+      isLoading={loading}
       onClick={onClick}
     >
       { children }

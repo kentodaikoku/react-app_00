@@ -17,7 +17,7 @@ export const useAuth = () => {
     // JSON Placeholder　 // REF; async/awaitの記述
     axios.get<User>(`https://jsonplaceholder.typicode.com/users/${id}`).then((res) => {
       if (res.data) {
-        const isAdmin = res.data.id === 10 ? true : false;
+        const isAdmin = res.data.id === 10; //true or false
         setLoginUser({ ...res.data, isAdmin });
         showMessage({title: "Login Success", status: 'success'});
         navigate("/home");
