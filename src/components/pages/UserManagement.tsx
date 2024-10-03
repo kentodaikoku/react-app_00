@@ -4,6 +4,7 @@ import { UserCard } from "../organisms/user/UserCard";
 import { useAllUsers } from "../../hooks/useAllUsers";
 import { useSelectUser } from "../../hooks/useSelectUser";
 import { UserDetailModal } from "../organisms/user/UserDetailModal";
+import { useLoginUser } from "../../hooks/useLoginUser";
 
 
 export const UserManagement: FC = memo(() => {
@@ -19,6 +20,8 @@ export const UserManagement: FC = memo(() => {
   const onClickUser = useCallback((id: number) => {
     onSelectUser({id, users, onOpen});
   }, [onOpen, onSelectUser, users]);
+
+  const { loginUser } = useLoginUser(); //Global value set in context
   
   return (
     <>
@@ -43,7 +46,7 @@ export const UserManagement: FC = memo(() => {
           })}
         </Wrap>
       )}
-      <UserDetailModal isOpen={isOpen} onClose={onClose} user={seletedUser} />
+      <UserDetailModal isOpen={isOpen} onClose={onClose} user={seletedUser} isAdmin={loginUser?.isAdmin} />
     </>
   )
 })
