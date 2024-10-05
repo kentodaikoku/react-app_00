@@ -7,7 +7,7 @@ export const Login: FC = memo(() => {
   const [userID, setUserID] = useState('');
   const onChangeUserID = (e: ChangeEvent<HTMLInputElement>) => setUserID(e.target.value);
   
-  const {login, loading} = useAuth();
+  const { login, loading } = useAuth();
   const onClickLogin = () => login(userID);
 
   return (

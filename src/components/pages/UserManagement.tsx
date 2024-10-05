@@ -8,14 +8,14 @@ import { useLoginUser } from "../../hooks/useLoginUser";
 
 
 export const UserManagement: FC = memo(() => {
-  const {loading, users, getUsers} = useAllUsers();
-  const {onSelectUser, seletedUser} = useSelectUser();
+  const { loading, users, getUsers } = useAllUsers();
+  const { onSelectUser, seletedUser } = useSelectUser();
 
   useEffect(() =>{
     getUsers();
   }, [getUsers]);
 
-  const {isOpen, onOpen, onClose} = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const onClickUser = useCallback((id: number) => {
     onSelectUser({id, users, onOpen});
@@ -26,9 +26,7 @@ export const UserManagement: FC = memo(() => {
   return (
     <>
       {loading ? (
-        <Center h="100vh">
-          <Spinner />
-        </Center>
+        <Center h="100vh"><Spinner /></Center>
       ) : (
         <Wrap p={{ base: 4, md: 10 }}>
           {users.map((user) => {

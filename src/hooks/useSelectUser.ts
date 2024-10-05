@@ -11,7 +11,7 @@ export const useSelectUser = () => {
   const [seletedUser, setSelectUser] = useState<User | null>(null);
 
   const onSelectUser = useCallback((props: Props) => {
-    const {id, users, onOpen} = props;
+    const { id, users, onOpen } = props;
     const targetUers = users.find((user) => user.id === id);
     setSelectUser(targetUers!); // '!' is used when it defenitely has data in there
 

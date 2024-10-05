@@ -5,7 +5,7 @@ import { MenuDrawer } from "../../molecules/MenuDrawer";
 import { useNavigate } from "react-router-dom";
 
 export const Header: FC = memo(() => {
-  const {isOpen, onClose, onOpen} = useDisclosure();
+  const { isOpen, onClose, onOpen } = useDisclosure();
   const navigate = useNavigate();
   
   const handleToLink = (path: string) => {
@@ -29,6 +29,7 @@ export const Header: FC = memo(() => {
         <Flex as={'a'} align={"center"} mr={8} _hover={{ cursor: 'pointer' }} onClick={() => handleToLink('')}>
           <Heading as={'h1'} fontSize={{ base: 'md', md: 'lg' }}>User Management APP</Heading>   
         </Flex>
+
         {/* Link */}
         <Flex align={"center"} fontSize={"sm"} flexGrow={1} display={{ base: 'none', md: 'flex' }}>
           <Box pr={4}>
@@ -36,6 +37,7 @@ export const Header: FC = memo(() => {
           </Box>
           <Link onClick={() => handleToLink('/setting')}>Setting</Link>
         </Flex>
+        
         {/* Mobile Link */}
         <MenuIconButton onOpen={onOpen} />
       </Flex>

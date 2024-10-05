@@ -8,7 +8,7 @@ type Props = {
 }
 
 export const MenuDrawer: FC<Props> = memo((props) => {
-  const {isOpen, onClose, handleToLink} = props;
+  const { isOpen, onClose, handleToLink } = props;
   return (
     <Drawer isOpen={isOpen} onClose={onClose} placement="left" size='xs'>
       <DrawerOverlay>

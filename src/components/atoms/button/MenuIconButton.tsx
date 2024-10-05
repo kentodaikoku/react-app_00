@@ -7,7 +7,7 @@ type Props = {
 }
 
 export const MenuIconButton: FC<Props> = memo((props) => {
-  const {onOpen} = props;
+  const { onOpen } = props;
 
   return (
     <IconButton 

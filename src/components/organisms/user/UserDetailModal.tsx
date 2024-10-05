@@ -11,7 +11,7 @@ type Props = {
 }
 
 export const UserDetailModal: FC<Props> = memo((props) => {
-  const {isOpen, onClose, user, isAdmin = false} = props;
+  const { isOpen, onClose, user, isAdmin = false } = props;
 
   const [username, setUsername] = useState("");
   const [fullname, setFullname] = useState("");
