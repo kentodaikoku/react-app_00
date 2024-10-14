@@ -6,9 +6,7 @@ type Props = {
   onOpen: () => void;
 }
 
-export const MenuIconButton: FC<Props> = memo((props) => {
-  const { onOpen } = props;
-
+export const MenuIconButton: FC<Props> = memo(({onOpen}) => {
   return (
     <IconButton 
       onClick={onOpen} 

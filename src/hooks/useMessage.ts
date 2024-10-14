@@ -9,8 +9,7 @@ type Props = {
 export const useMessage = () => {
   const toast = useToast();
 
-  const showMessage = useCallback((props: Props) => {
-    const {title, status} = props;
+  const showMessage = useCallback(({title, status}: Props) => {
     toast({
       title,
       status,

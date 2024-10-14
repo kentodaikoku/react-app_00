@@ -9,8 +9,7 @@ type Props = {
   onClickUser: (id: number) => void;
 }
 
-export const UserCard: FC<Props> = memo((props) => {
-  const { id, imgUrl, nickName, fullName, onClickUser } = props;
+export const UserCard: FC<Props> = memo(({ id, imgUrl, nickName, fullName, onClickUser } ) => {
   return (
       <Box 
         w="260px" 

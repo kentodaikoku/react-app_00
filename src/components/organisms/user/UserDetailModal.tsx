@@ -10,9 +10,7 @@ type Props = {
   isAdmin?: boolean; //optional
 }
 
-export const UserDetailModal: FC<Props> = memo((props) => {
-  const { isOpen, onClose, user, isAdmin = false } = props;
-
+export const UserDetailModal: FC<Props> = memo(({ isOpen, onClose, user, isAdmin = false }) => {
   const [username, setUsername] = useState("");
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
